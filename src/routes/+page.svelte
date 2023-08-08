@@ -13,7 +13,7 @@
     // Universal Carousel Variables
     let index: number = 0;
     const numStates: number = 3; // Total number of indices that are possible
-    const delay: number = 3000; // 3s
+    const delay: number = 5000; // 5s
     let interval: number;
     const incrementIndex = () => {
         if (index < numStates - 1) {
@@ -32,9 +32,9 @@
 
     // Image Carousel
     const carouselPhotos = [
-        "https://picsum.photos/300/200?random=1",
-        "https://picsum.photos/300/200?random=2",
-        "https://picsum.photos/300/200?random=3",
+        "/carousel/HarryPosing.JPG",
+        "/carousel/HarryTeaching.png",
+        "/carousel/HarryCoding.JPG",
     ];
 
     // Name Carousel
@@ -71,7 +71,7 @@
 
     function reset_interval() {
         clearInterval(interval);
-        interval = setInterval(incrementIndex, 4000);
+        interval = setInterval(incrementIndex, delay);
     }
 
     function reset_animation() {

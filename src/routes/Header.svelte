@@ -73,6 +73,7 @@
 
     b {
         padding-left: var(--size-2);
+        font-weight: var(--font-weight-7);
     }
 
     @media (min-width: 768px) {
