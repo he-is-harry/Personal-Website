@@ -559,7 +559,7 @@
             </div>
             
             <p class="teaching-information">Harry has over 200+ hours of experience teaching others through his part-time job at Kumon and executive role in the Computer Science Education Club.</p>
-            <p class="teaching-information">He has helped many people understand concepts they were struggling with, including high-school level English, university-level mathematics, and university-level computer science. See one of Harry's example lectures on the right.</p>
+            <p class="teaching-information">He has helped many people understand concepts they were struggling with, including high-school level English, university-level mathematics, and university-level computer science. See one of Harry's example lectures on the right or <a href="https://youtu.be/ghZ83DrP85g">watch on Youtube</a>.</p>
         </div>
         <Youtube videoId="ghZ83DrP85g" />
         

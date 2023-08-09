@@ -25,7 +25,7 @@
         
     
         <div class="form">
-            <form action="https://formsubmit.co/harryhemr@gmail.com" method="POST">
+            <form action="https://formsubmit.co/d5da8b5555cb998538ede8703c44f0a7" method="POST">
                 <input type="hidden" name="_subject" value="New website contact">
                 <h5>EMAIL</h5>
                 <input type="email" name="email" placeholder="Your email" required class="email-input">

@@ -1,52 +1,39 @@
-# Harry's `create-svelte` Template
+# Harry's Personal Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Author: Harry He
 
-## Creating a project
+> To visit the production version of the site, you can check out [the website](https://heisharry.vercel.app/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Project Description
 
-```bash
-# create a new project in the current directory
-git clone https://github.com/he-is-harry/SvelteKit-Template.git
-# rename the repository name to your workspace name
-mv SvelteKit-Template project-name
-# enter your new workspace
-cd project-name
-# Then remove the current git repository from the project by running
-rm -rf .git*
+First off, a cool image with the branding colors because nobody really clicks on the [contact](https://heisharry.vercel.app/contact) page.
+<p align="center">
+   <img width="auto" src="/static/ContactHeader.png" />
+</p>
+
+The website is Harry's personal website containing information about Harry's projects, skills, and professional history.
+
+### Development Tools Used
+- **SvelteKit**: Web framework used to develop the site
+- **Open Props**: Modern CSS library used to handle design consistency
+- **PostCSS (Just In Time) Props**: Extension used to optimize Open Props variables
+- **FormSubmit**: Backend API used to route email messages
+
+### Asset Generation
+
+As with many Web Development projects, many assets had to be generated to be put onto the website. Here are some of the tools used to create the images that you see on the website.
+- **Photoshop**: Image editor used to capture Harry and design images with special effects
+- **Google Drawings**: Virtual board used to create thumbnail images of projects
+- **Figma**: Design tool used to generate logos and set up SVG animations
+
+## Dependencies
+Site was developed with [Node](https://nodejs.org/) >= v18, optional [pnpm](https://pnpm.io/) for managing node packages, [Svelte](https://svelte.dev/) version 4.0.0, and [Open Props](https://open-props.style/) version 1.5.10.
+
+## Adapting This Project
+To develop a site with the same stack, you can use Harry's SvelteKit-Template on the [postcss-open-props branch](https://github.com/he-is-harry/SvelteKit-Template/tree/postcss-open-props) to use Svelte, Open Props, and PostCSS (Just In Time) Props.
+
+To simply copy in the template run the following command.
+
 ```
-Alternatively, if you are running in a existing workspace
-
+git clone -b postcss-open-props --single-branch https://github.com/he-is-harry/SvelteKit-Template.git
 ```
-git clone https://github.com/he-is-harry/SvelteKit-Template.git
-```
-
-Then you just need to delete the `SvelteKit-Template` folder which also deletes the Github repository that this refers to. On Mac, you can delete this by pressing Command-Option-Delete **(⌘⌥⌫)**. On Windows, you should use Shift-Delete **(⇧⌫)**.
-
-That's it! You can now jumpstart right into your project.
-In order for your project to feel more complete you may wish to modify the name of the project in your `package.json` file.
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-**Note:** You may want to initially run this command so that you create a `./.svelte-kit` folder for your `tsconfig.json`.
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
