@@ -4,9 +4,9 @@
     import Footer from "./Footer.svelte";
 </script>
 
-<svelte:head>
-    <link rel="stylesheet" href="/src/fonts.css" />
-</svelte:head>
+<!-- <svelte:head>
+    <link rel="stylesheet" href="fonts.css" />
+</svelte:head> -->
 
 <div class="layout">
     <Header />

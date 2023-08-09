@@ -111,3 +111,58 @@ ol {
 li {
 	padding-inline-start: 0;
 }
+
+/* fonts.css */
+
+/* SVG format is included for legacy support in mobile browsers and older browsers */
+/* Note that SVG format is only really compatible with Safari and it is not with Chrome */
+/* 8 7 6 5 4 3 */
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/SF-Pro-Display-Bold.woff2'), local(''), url('/fonts/SF-Pro-Display-Bold.svg#SFProDisplay-Bold') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/SF-Pro-Display-Heavy.woff2'), local(''), url('/fonts/SF-Pro-Display-Heavy.svg#SFProDisplay-Heavy') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/SF-Pro-Display-Light.woff2'), local(''), url('/fonts/SF-Pro-Display-Light.svg#SFProDisplay-Light') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/SF-Pro-Display-Medium.woff2'), local(''), url('/fonts/SF-Pro-Display-Medium.svg#SFProDisplay-Medium') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/SF-Pro-Display-Regular.woff2'), local(''), url('/fonts/SF-Pro-Display-Regular.svg#SFProDisplay-Regular') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/SF-Pro-Display-RegularItalic.woff2'), local(''), url('/fonts/SF-Pro-Display-RegularItalic.svg#SFProDisplay-RegularItalic') format('svg');
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/SF-Pro-Display-Semibold.woff2'), local(''), url('/fonts/SF-Pro-Display-Semibold.svg#SFProDisplay-Semibold') format('svg');
+}
