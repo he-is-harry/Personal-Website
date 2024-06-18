@@ -8,7 +8,7 @@ Author: Harry He
 
 First off, a cool image with the branding colors because nobody really clicks on the [contact](https://heisharry.vercel.app/contact) page.
 <p align="center">
-   <img width="auto" src="/static/ContactHeader.png" />
+   <img width="auto" src="/static/ContactHeader.webp" />
 </p>
 
 The website is Harry's personal website containing information about Harry's projects, skills, and professional history.

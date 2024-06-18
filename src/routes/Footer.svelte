@@ -29,7 +29,7 @@
         <Icon length=1.5rem type={IconType.Email} link="mailto:harryhemr@gmail.com"/>
     </div>
     
-    <p class="f1-rich-text">© 2023 Harry He. All Rights Reserved.</p>
+    <p class="f1-rich-text">© 2024 Harry He. All Rights Reserved.</p>
 </div>
 
 <style>

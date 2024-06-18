@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    let player;
     export let videoId: string;
 
     const ytPlayerId = "youtube-player";

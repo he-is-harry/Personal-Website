@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ImageLoader from "$lib/components/LazyImages/ImageLoader.svelte";
     import Logo from "$lib/components/Logo.svelte";
     import { url } from "$lib/config";
 </script>
@@ -9,7 +10,8 @@
 
 <div class="content">
     <div class="image-transition"></div>
-    <img src="/ContactHeader.png" alt="Serious Harry" class="contact-header"/>
+    <ImageLoader classes="contact-header" src="/ContactHeader.webp" alt="Serious Harry"></ImageLoader>
+    <!-- <img src="/ContactHeader.png" alt="Serious Harry" class="contact-header"/> -->
     <div class="contact-block">
         <div class="form-title">
             <h1>Contact</h1>
@@ -50,19 +52,6 @@
     .image-transition {
         height: var(--size-7);
         background: linear-gradient(var(--surface-1) 30%, var(--true-dark) 80%);
-    }
-
-    .contact-header {
-        position: relative;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        max-height: 100vh;
-        object-fit: cover;
-        object-position: top center;
-        -webkit-filter: brightness(0.8);
-        filter: brightness(0.8);
-        z-index: auto;
     }
 
     .contact-block {
@@ -186,26 +175,5 @@
     }
     .submit-button:active {
         background-color: var(--brand-dark-2);
-    }
-
-    @media (min-width: 480px) {
-        .contact-header {
-            height: 240px;
-        }
-    }
-    @media (min-width: 768px) {
-        .contact-header {
-            height: 384px;
-        }
-    }
-    @media (min-width: 1024px) {
-        .contact-header {
-            height: 512px;
-        }
-    }
-    @media (min-width: 1440px) {
-        .contact-header {
-            height: 720px;
-        }
     }
 </style>

@@ -22,4 +22,6 @@ export enum TagType {
     Backpropagation,
     Template,
     Algorithms,
+    React,
+    Flask
 }

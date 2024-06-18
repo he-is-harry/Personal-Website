@@ -12,3 +12,4 @@ vite.config.ts.timestamp-*
 .eslintrc.cjs
 .eslintignore
 src/legacy
+raw-resources

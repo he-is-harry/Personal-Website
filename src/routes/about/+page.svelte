@@ -1,3 +1,7 @@
+<script>
+    import ImageLoader from "$lib/components/LazyImages/ImageLoader.svelte";
+</script>
+
 <svelte:head>
     <title>About - Harry He</title>
 </svelte:head>
@@ -11,7 +15,7 @@
         has envisioned, launched, and built a number of projects. He's a full
         stack developer, game designer, and teacher. In 2018, Harry started
         studying competitive programming by learning Java and preparing for the
-        Canadian Computing Compeition. From there, he started learning
+        Canadian Computing Competition. From there, he started learning
         algorithms and data structures and picked up two other languages, Python
         and C++, all the way throughout middle school and highschool going all
         the way up to learning advanced topics such as persistent data
@@ -34,11 +38,12 @@
     <div class="image-band">
         <!-- Render in all of the images in the image band -->
         {#each { length: 4 } as _, i}
-            <img
+            <ImageLoader classes="banded-image" src="/About{i + 1}.webp" alt="Project Images"></ImageLoader>
+            <!-- <img
                 src="/About{i + 1}.png"
                 alt="Project Images"
                 class="banded-image"
-            />
+            /> -->
         {/each}
     </div>
     
@@ -95,10 +100,5 @@
         font-weight: var(--font-weight-3);
         font-size: var(--font-size-1);
         margin: 0;
-    }
-
-    .banded-image {
-        width: 25%;
-        height: 25%;
     }
 </style>

@@ -3,6 +3,7 @@
     import { inview } from "svelte-inview";
     import { cubicInOut } from "svelte/easing";
     import { fade } from "svelte/transition";
+    import ImageLoader from "./LazyImages/ImageLoader.svelte";
 
     // Display Variables
     let cur_adjectives: number = 0;
@@ -40,9 +41,11 @@
                     // Fix the scroll height of the terminal bar at the end
                     var elem = document.getElementById('terminal-text');
                     if(elem == null) {
-                        throw new Error("Undefined Element");
+                        // Stop the interval since the page has likely changed
+                        clearInterval(intervalID);
+                        // throw new Error("Undefined Element");
                     } else {
-                        console.log(elem.scrollHeight);
+                        // console.log(elem.scrollHeight);
                         elem.scrollTop = elem.scrollHeight;
                     }
 
@@ -87,10 +90,12 @@
     const flicker_delay: number = 250;
     let cursor_active: boolean = true;
     onMount(() => {
-        setInterval(() => {
+        let flickeringIntervalId = setInterval(() => {
             var cursor = document.getElementById('cursor');
             if(cursor == null) {
-                throw new Error("Undefined Element");
+                // Stop the interval since the page has likely changed
+                clearInterval(flickeringIntervalId);
+                // throw new Error("Undefined Element");
             } else {
                 if(tick_delay > 0 || ending) {
                     if(cursor_active) {
@@ -128,11 +133,12 @@
                 </div>
             </div>
             <div class="display-bottom">
-                <img
+                <ImageLoader classes="display-image" src="/DisplayImage.webp" alt="Harry Posing"></ImageLoader>
+                <!-- <img
                     src="/DisplayImage.png"
                     alt="Harry Posing"
                     class="display-image"
-                />
+                /> -->
                 {#if cur_adjectives == 1}
                     <h2 class="display-adjectives" in:fade={{ duration: 1000, easing: cubicInOut }}>{@html initial_adjectives}</h2>
                 {:else if cur_adjectives == 2}
@@ -243,12 +249,6 @@
         position: relative;
     }
 
-    .display-image {
-        animation: 1s fadeIn ease;
-        width: auto;
-        height: 100%;
-    }
-
     .display-adjectives {
         position: absolute;
         top: 10cqh;
@@ -260,12 +260,6 @@
         white-space: nowrap;
     }
     @media (max-width: 480px) {
-        /* Shift the image more to the left */
-        .display-image {
-            position: absolute;
-            left: -40px;
-        }
-
         .display-adjectives {
             top: 10cqh;
             font-size: var(--font-size-1); 

@@ -60,6 +60,14 @@
         textColor = "#000000";
     } else if (type == TagType.Algorithms) {
         tag = "#algorithms";
+    } else if (type == TagType.React) {
+        tag = "#react";
+        background = "#222";
+        textColor = "#00d8ff";
+    } else if (type == TagType.Flask) {
+        tag = "#flask";
+        background = "#5ba8c0";
+        textColor = "#f9f8f9";
     }
 </script>
 

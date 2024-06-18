@@ -33,7 +33,7 @@
     // Image Carousel
     const carouselPhotos = [
         "/carousel/HarryPosing.JPG",
-        "/carousel/HarryTeaching.png",
+        "/carousel/HarryTeaching.webp",
         "/carousel/HarryCoding.JPG",
     ];
 
@@ -132,11 +132,14 @@
             style="container-type: size; width: {imageWidth}; height: {imageHeight}; left: {imageHoriPos}; top: {imageVertPos};"
         >
             {#each [carouselPhotos[index]] as src (index)}
+                <!-- <ImageLoader classes="slideshow-image" {src} alt="Images of Harry" id="image-{index}" hasTransition={false}></ImageLoader> -->
+                <!-- To allow the animations to work, it appears they must be a regular image -->
                 <img
                     {src}
                     alt="Images of Harry"
                     class="slideshow-image"
                     id="image-{index}"
+                    loading="lazy"
                 />
             {/each}
 
@@ -271,7 +274,7 @@
         <p>
             Harry He is studying Computer Science at the University of Waterloo.
             He is a full-stack developer with a passion to learn and teach,
-            having taught others unversity level computer science, competitive
+            having taught others university level computer science, competitive
             programming, and even English. You can find him on <a
                 href="https://github.com/he-is-harry">Github</a
             >,
@@ -338,13 +341,6 @@
         box-sizing: border-box;
     }
 
-    .slideshow-image {
-        animation: 1s fadeIn ease;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -352,6 +348,13 @@
         to {
             opacity: 1;
         }
+    }
+
+    .slideshow-image {
+        animation: 1s fadeIn ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .arrow-left, .arrow-right {

@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { TagType } from "$lib/types";
+    import ImageLoader from "./LazyImages/ImageLoader.svelte";
     import Tag from "./Tag.svelte";
 
     export let projectLink: string;
@@ -13,7 +14,8 @@
     <a href={projectLink} class="no-underline">
         <!-- Put a container so that the container query units can be used -->
         <div style="container-type: inline-size; width: 100%; height: auto;">
-            <img class="project-image" src={imgSrc} alt={title}/>
+            <ImageLoader classes="project-image" src={imgSrc} alt={title}></ImageLoader>
+            <!-- <img class="project-image" src={imgSrc} alt={title}/> -->
         </div>
         <section class="project-info">
             <h5 class="project-title">{title}</h5>
@@ -51,17 +53,6 @@
 
     .no-underline {
         text-decoration-line: none;
-    }
-
-    .project-image {
-        border-top-left-radius: var(--size-2-5);
-        border-top-right-radius: var(--size-2-5);
-        width: 100%;
-        max-width: 100%;
-        height: calc(100cqw * 0.5625);
-        vertical-align: middle;
-        overflow-clip-margin: content-box;
-        overflow: clip;
     }
 
     .project-info {

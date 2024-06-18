@@ -1,0 +1,94 @@
+/* Since images have been updated to use lazy loading and are linked 
+   into a separate component, the styles cannot be put into the component
+   where the image is placed. Thus, image styles are put into this style sheet */
+
+/* ProjectBlock.svelte */
+.project-image {
+    border-top-left-radius: var(--size-2-5);
+    border-top-right-radius: var(--size-2-5);
+    width: 100%;
+    max-width: 100%;
+    height: calc(100cqw * 0.5625);
+    vertical-align: middle;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* Terminal.svelte */
+.display-image {
+    animation: 1s fadeIn ease;
+    width: auto;
+    height: 100%;
+}
+
+@media (max-width: 480px) {
+    /* Shift the image more to the left */
+    .display-image {
+        position: absolute;
+        left: -40px;
+    }
+}
+
+/* About Page */
+.banded-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Page */
+.contact-header {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: top center;
+    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8);
+    z-index: auto;
+}
+
+@media (min-width: 480px) {
+    .contact-header {
+        height: 240px;
+    }
+}
+@media (min-width: 768px) {
+    .contact-header {
+        height: 384px;
+    }
+}
+@media (min-width: 1024px) {
+    .contact-header {
+        height: 512px;
+    }
+}
+@media (min-width: 1440px) {
+    .contact-header {
+        height: 720px;
+    }
+}
+
+/* Thanks Page */
+.thanks-image {
+    width: 220px;
+    height: 154px;
+    padding-bottom: var(--size-12);
+}
+
+@media (min-width: 480px) {
+    .thanks-image {
+        width: 440px;
+        height: 308px;
+        padding-bottom: var(--size-12);
+    }
+}
+
+@media (min-width: 768px) {
+    .thanks-image {
+        width: 660px;
+        height: 462px;
+        padding-bottom: var(--size-12);
+    }
+}
